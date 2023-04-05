@@ -1,0 +1,65 @@
+.crud-table-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 340px);
+  gap: 20px 12px;
+  margin-top: 16px;
+  .card-item {
+    background-color: white;
+    border: 2px solid #eee;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 6px;
+    padding: 6px;
+    .card-item-left {
+      .card-item-image {
+        position: relative;
+        overflow: hidden;
+        img {
+          object-fit: cover;
+          height: 140px;
+          object-position: center;
+          border-radius: 10px;
+          width: 140px;
+        }
+        .card-item-placa {
+          background-color: white;
+          border-radius: 6px;
+          border: 3px solid black;
+          bottom: 0;
+          color: black;
+          font-weight: 600;
+          font-size: 16px;
+          max-width: 90%;
+          padding: 3px 10px;
+          overflow: auto;
+          position: absolute;
+        }
+      }
+          
+      .card-item-left-info-wrapper { 
+        display: flex;
+        gap: 8px;
+        margin-top: 4px;
+      }
+
+      .card-item-left-info {
+        font-size: 12px;
+      }
+    }
+    .card-item-right {
+      .card-item-right-user-label {
+        font-size: 13px;
+        margin-top: 6px;
+        margin-bottom: 2px;
+      }
+      .card-item-right-user {
+        .card-item-right-item {
+          display: flex;
+          font-size: 12px;
+          gap: 6px;
+
+        }
+      }
+    }
+  }
+}

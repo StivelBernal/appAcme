@@ -5,25 +5,56 @@
       <button class="button-primary" (click)="create()" [disabled]="load">AGREGAR</button>
     </div>
   </div>
-  <div class="crud-table-cards">
-    <div class="card-item" *ngFor="let item of listItems; index as i;">
-      <div>{{item.id}}</div>
-      <div>{{item.first_name}}</div>
-      <div>{{item.last_name}}</div>
-      <div>{{item.document_number}}</div>
-      <div>{{item.phone}}</div>
-      <div>{{item.address}}</div>
-      <div>{{item.city}}</div>
+</div>
+<div class="crud-table-cards">
+  <div class="card-item" *ngFor="let item of listItems; index as i;">
+    <div class="card-item-left">
+      <div class="card-item-image">
+        <div class="card-item-placa">{{item.placa}}</div>
+        <img src="/assets/img/bus.jpg" class="logo" />
+      </div>
+      <div class="card-item-left-info-wrapper">
+        <div class="card-item-left-info">
+          <strong>Color: </strong><span>{{item.color}}</span>
+        </div>
+        <div class="card-item-left-info">
+          <strong>Tipo: </strong><span>{{item.type}}</span>
+        </div>
+      </div>
     </div>
 
-    <div class="card-item">
-      <div>item.id</div>
-      <div>item.first_name</div>
-      <div>item.last_name</div>
-      <div>item.document_number</div>
-      <div>item.phone</div>
-      <div>item.address</div>
-      <div>item.city</div>
+    <div class="card-item-right">
+      <div class="card-item-right-user-label">Propietario</div>
+      <div class="card-item-right-user">
+        <div class="card-item-right-item">
+          <strong>Nombre: </strong><span>{{item.owner.first_name}} {{item.owner.last_name}}</span>
+        </div>
+        <div class="card-item-right-item">
+          <strong>Teléfono: </strong><span>{{item.owner.phone}}</span>
+        </div>
+        <div class="card-item-right-item">
+          <strong>Dirección:</strong><span>{{item.owner.address}}</span>
+        </div>
+        <div class="card-item-right-item">
+          <strong>Documento:</strong><span>{{item.owner.document_number}}</span>
+        </div>
+      </div>
+      <div class="card-item-right-user-label">Conductor</div>
+      <div class="card-item-right-user">
+        <div class="card-item-right-item">
+          <strong>Nombre: </strong><span>{{item.driver.first_name}} {{item.driver.last_name}}</span>
+        </div>
+        <div class="card-item-right-item">
+          <strong>Teléfono: </strong><span>{{item.driver.phone}}</span>
+        </div>
+        <div class="card-item-right-item">
+          <strong>Dirección:</strong><span>{{item.driver.address}}</span>
+        </div>
+        <div class="card-item-right-item">
+          <strong>Documento:</strong><span>{{item.driver.document_number}}</span>
+        </div>
+      </div>
     </div>
   </div>
+  
 </div>

@@ -36,7 +36,6 @@ export class VehiclesComponent implements OnInit{
       dialogConfig.minWidth = 400
       dialogConfig.minHeight = 400
 
-
       const dialogRef = this.dialog.open(FormVehicleComponent, dialogConfig);
 
       dialogRef.afterClosed().subscribe(
