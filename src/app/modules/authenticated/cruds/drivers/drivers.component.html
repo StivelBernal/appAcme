@@ -1,0 +1,45 @@
+<div class="crud">
+  <div class="filters">
+    <div class="title-module"><span>Conductores</span></div>
+    <div class="right-actions">
+      <button class="button-primary" (click)="create()" [disabled]="load">AGREGAR</button>
+    </div>
+  </div>
+  <div class="crud-table">
+    <div class="headers-table">
+      <div class="header-item">
+        <span class="header-item-name">ID</span> 
+      </div>
+      <div class="header-item">
+        <span class="header-item-name">NOMBRES</span> 
+      </div>
+      <div class="header-item">
+        <span class="header-item-name">APELLIDOS</span> 
+      </div>
+      <div class="header-item">
+        <span class="header-item-name">NÚMERO DE DOCUMENTO</span> 
+      </div>
+      <div class="header-item">
+        <span class="header-item-name">TELÉFONO</span> 
+      </div>
+      <div class="header-item">
+        <span class="header-item-name">DIRECCIÓN</span> 
+      </div>
+      <div class="header-item">
+        <span class="header-item-name">CIUDAD</span> 
+      </div>
+    </div>
+    <div class="list-items-table">
+      <div class="list-item-table" *ngFor="let item of listItems; index as i;">
+        <div>{{item.id}}</div>
+        <div>{{item.first_name}}</div>
+        <div>{{item.last_name}}</div>
+        <div>{{item.document_number}}</div>
+        <div>{{item.phone}}</div>
+        <div>{{item.address}}</div>
+        <div>{{item.city}}</div>
+
+      </div>
+    </div>
+  </div>
+</div>

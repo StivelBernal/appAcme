@@ -1,0 +1,29 @@
+<div class="crud">
+  <div class="filters">
+    <div class="title-module"><span>Vehiculos</span></div>
+    <div class="right-actions">
+      <button class="button-primary" (click)="create()" [disabled]="load">AGREGAR</button>
+    </div>
+  </div>
+  <div class="crud-table-cards">
+    <div class="card-item" *ngFor="let item of listItems; index as i;">
+      <div>{{item.id}}</div>
+      <div>{{item.first_name}}</div>
+      <div>{{item.last_name}}</div>
+      <div>{{item.document_number}}</div>
+      <div>{{item.phone}}</div>
+      <div>{{item.address}}</div>
+      <div>{{item.city}}</div>
+    </div>
+
+    <div class="card-item">
+      <div>item.id</div>
+      <div>item.first_name</div>
+      <div>item.last_name</div>
+      <div>item.document_number</div>
+      <div>item.phone</div>
+      <div>item.address</div>
+      <div>item.city</div>
+    </div>
+  </div>
+</div>

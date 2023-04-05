@@ -1,0 +1,18 @@
+.menutop {
+  align-items: center;
+  background-color: #fffefe;
+  border: 1px solid #bbbbbb;
+  border-radius: 4px;
+  box-shadow: 0px 2px 6px 0px #00000066;
+  display: flex;
+  justify-content: end;
+  height: 60px;
+  margin: 16px 14px 0 10px;
+  margin-left: 0;
+  img {
+    cursor: pointer;
+    height: 30px;
+    margin-right: 14px;
+    opacity: 0.7;
+  }
+}

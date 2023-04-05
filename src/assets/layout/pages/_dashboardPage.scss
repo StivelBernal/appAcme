@@ -1,0 +1,64 @@
+.dashboardPage {
+  padding: 20px 0 0;
+
+  .ExpertsShopping {
+    .ExpertsShoppingItems {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px;
+      width: 100%;
+      .ExpertsShoppingItem {
+        background-color: #fffefe;
+        box-shadow: -3px 1px 8px #dfdedf, 1px -1px 3px #dfdedf;
+        height: 140px;
+        position: relative;
+        width: 300px;
+        .ExpertsShoppingItemHeader {
+          color: #404040;
+          display: flex;
+          flex-direction: column;
+          font-weight: bold;
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          .ExpertsShoppingItemLabel {
+            font-size: 16px;
+          }
+          .ExpertsShoppingItemValue {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  // common
+  .filters {
+    grid-template-columns: minmax(max-content, 240px) 1fr max-content;
+    .filters-title {
+        align-items: center;
+        color: var(--template-dark-blue);
+        display: flex;
+        font-size: 18px;
+        font-weight: bold;
+        border-right:  1px solid rgba(187, 187, 187, 100);
+        padding-right: 18px;
+    }
+
+    .filters-group {
+        justify-content: flex-start;
+        padding-left: 16px;
+        width: 100%;
+        .filters-fields {
+            width: 100%;
+        }
+    }
+
+    .right-actions {
+        padding-right: 8px;
+    }
+
+  }
+
+}

@@ -1,0 +1,256 @@
+@import './colors';
+@import './form/form';
+@import './crud/crud';
+@import './pages/index';
+
+body, html {
+  font-size: 14px;
+}
+body {
+  font-family: "HelveticaNeue", Helvetica, sans-serif;
+  font-weight: normal;
+  margin: 0;
+
+  .content-wrapper {
+    margin-right: 14px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+      background-color: #aeaeae;
+      border-radius: 20px;
+  }
+
+  &::-webkit-scrollbar-track {
+      background: #ecebeb;
+      border-radius: 20px;
+  }
+
+}
+
+.info-accept {
+  color: var(--template-dark-blue);
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 16px;
+
+  svg {
+    background-color: rgba(108, 214, 66, 0.768627451);
+    border-radius: 4px;
+    fill: #000;
+    height: 16px;
+    margin-right: 6px;
+    width: 16px;
+  }
+}
+
+.line-clamp {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box !important;
+  padding: 0 !important;
+  overflow: hidden;
+  &.line-1 { -webkit-line-clamp: 1;}
+  &.line-3 { -webkit-line-clamp: 3;}
+  &.line-4 { -webkit-line-clamp: 4;}
+  &.line-5 { -webkit-line-clamp: 5;}
+  &.line-6 { -webkit-line-clamp: 6;}
+
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+button {
+  cursor: pointer;
+  &[disabled] {
+    opacity: 0.7;
+  }
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.c-help {
+  cursor: help;
+}
+
+
+.label-enviroment {
+  background-color: red;
+  color: white;
+  display: block;
+  font-size: 11px;
+  text-align: center;
+  min-width: 110px;
+  font-weight: 600;
+  padding: 2px 14px;
+  transform: rotate(45deg);
+  text-transform: capitalize;
+  position: fixed;
+  right: -20px;
+  top: 20px;
+  z-index: 1000;
+  &:hover {
+    opacity: 0;
+  }
+}
+
+.veficating-session.backdrop-alert {
+  align-items: center;
+  display: flex;  
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--template-cian);
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2000;
+  &.loading-text-dots {
+    width: 40px;
+  }
+}
+
+
+.input-style {
+  background-color: rgba(255, 255, 255);
+  border: 1px solid rgba(200, 200, 200);
+  border-radius: 5px;
+  line-height: 20px;
+  position: relative;
+
+  .input-style-container-title {
+    color: rgba(121, 121, 121);
+    font-size: 15px;
+    position: absolute;
+    background-color: white;
+    left: 20px;
+    padding: 0 6px;
+    top: -12px;
+  }
+
+}
+
+.text-center {
+  text-align: center;
+}
+
+.option-item-custom {
+  align-items: center;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+
+  &.type-user {
+    align-items: center;
+    display: flex;
+    gap: 6px;
+    .user-image {
+      border-radius: 100%;
+      background-size: cover;
+      height: 28px;
+      width: 28px;
+      min-width: 28px;
+    }
+  }
+
+}
+
+
+.first_letter_upper {
+  display: block;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+
+.margin-auto {
+  margin: auto;
+}
+
+
+// TRANSCIONES
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-enter.fade-enter-active {
+  opacity: 0.5;
+
+  transition: opacity 250ms ease-out, transform 300ms ease;
+}
+.fade-exit {
+  opacity: 0.5;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 250ms ease-out, transform 300ms ease;
+}
+
+
+// slide
+.slide-enter,
+.slide-exit {
+  transition: transform 1000ms ease-out;
+}
+
+.slide-enter {
+  transform: translateX(100%);
+}
+
+.slide-enter.slide-enter-active {
+  transform: translateX(0%);
+}
+
+.slide-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(0%);
+}
+
+.slide-exit-active {
+  transform: translateX(-100%);
+}
+
+
+.loader-box {
+  animation: shimmer 2s linear infinite;
+  background: linear-gradient(to right,#eff1f3 4%,#e2e2e2 25%,#eff1f3 36%);
+  background-size: 1000px 100%;
+  height: 30px;
+  border-radius: 4px;
+}
+
+@keyframes shimmer{0%{background-position:-1000px 0}to{background-position:1000px 0}}
+
+.svg-close-add {
+  transform: rotate(45deg);
+}
+
+.fx-flex {
+  display: flex;
+}
+
+// .ql-editor {
+//   white-space: pre-wrap;
+//   word-wrap: break-word;
+//   p {
+//     white-space: normal   !important;
+//     text-align: left;
+//   }
+// }

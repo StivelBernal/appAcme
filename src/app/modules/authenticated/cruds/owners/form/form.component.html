@@ -1,0 +1,42 @@
+<div class="baseDialog">
+  <div class="formTitle">Crear propietario</div>
+  
+  <div class="formContent">
+
+    <div class="stvInputContainer">
+      <label>Nombres <span>*</span></label>
+      <input type="text" [(ngModel)]="first_name" name="first_name" placeholder="Jhon">
+    </div>
+
+    <div class="stvInputContainer">
+      <label>Apellidos <span>*</span></label>
+      <input type="text" [(ngModel)]="last_name" name="last_name" placeholder="Doe">
+    </div>
+
+    <div class="stvInputContainer">
+      <label>Número de documento <span>*</span></label>
+      <input type="text" [(ngModel)]="document_number" name="document_number" placeholder="123123123">
+    </div>
+
+    <div class="stvInputContainer">
+      <label>Dirección <span>*</span></label>
+      <input type="text" [(ngModel)]="address" name="address" placeholder="Avenida 34 12 - 12">
+    </div>
+
+    <div class="stvInputContainer">
+      <label>Teléfono <span>*</span></label>
+      <input type="text" [(ngModel)]="phone" name="phone" placeholder="3123123123">
+    </div>
+
+    
+    <div class="stvInputContainer">
+      <label>Ciudad <span>*</span></label>
+      <input type="text" [(ngModel)]="city" name="city" placeholder="Bogotá">
+    </div>
+  </div>
+  
+  <div class="formActions">
+    <button class="grey"(click)="close()">Cancelar</button>
+    <button class="primary"(click)="save()">Guardar</button>
+  </div>
+</div>

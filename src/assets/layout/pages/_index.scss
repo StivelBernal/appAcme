@@ -1,0 +1,37 @@
+@import './dashboardPage';
+
+.back-page-button-section {
+    padding: 0 10px;
+    position: absolute;
+    top: 32px;
+
+    svg {
+        cursor: pointer;
+        fill: var(--template-cian);
+        height: 32px;
+        transform: rotate(90deg);
+        width: 32px;
+    }
+}
+
+.changeItemAlert {
+    top: -10px;
+    right: 0;
+    position: absolute;
+    z-index: 111;
+    &.top-20 {
+        top: 26px;
+    }
+    &.top20 {
+        top: -20px;
+    }
+    &.top30 {
+        top: -30px;
+    }
+    svg {
+        cursor: help;
+        fill: rgb(255, 30, 0);
+        height: 20px;
+        width: 20px;
+    }
+}

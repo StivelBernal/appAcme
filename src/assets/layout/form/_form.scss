@@ -1,0 +1,59 @@
+@import './input';
+@import './buttons';
+
+.error-field {
+    color: #dd0101;
+    font-size: 12px;
+    margin: 0;
+}
+
+.baseDialog {
+    padding: 20px;
+
+    .formTitle {
+        color: var(--template-dark-blue);;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .formContent {
+        margin: 10px 0 20px;
+    }
+  
+    .formActions {
+        display: flex;
+        gap: 10px;
+        button {
+            align-items: center;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            background-color: var(--template-dark-blue);
+            display: flex;
+            font-size: 16px;
+            font-weight: 600;
+            height: 36px;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            &:hover {
+                outline: none;
+            }
+            &.grey {
+                background-color: var(--template-cian);
+            }
+        }
+    }
+}
+
+
+.stvInputContainer.Select {
+    select {
+        border: none;
+        height: 100%;
+        width: 100%;
+        &:focus {
+            outline: none;
+        }
+    }
+}

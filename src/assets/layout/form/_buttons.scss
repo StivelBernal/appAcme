@@ -1,0 +1,14 @@
+.button-primary {
+  border-radius: 8px;
+  border: none;
+  background-color: var(--template-dark-blue);
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 16px;
+  margin-left: 10px;
+  &:hover, &:focus {
+      opacity: 0.8;
+      outline: none;
+  }
+}

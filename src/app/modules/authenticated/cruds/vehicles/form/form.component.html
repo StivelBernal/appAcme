@@ -1,0 +1,52 @@
+<div class="baseDialog">
+  <div class="formTitle">Crear vehiculo</div>
+  
+  <div class="formContent">
+
+    <div class="stvInputContainer Select">
+      <label>Conductor <span>*</span></label>
+      <select [(ngModel)]="driver_id" name="driver_id">
+        <option [value]="item.id" *ngFor="let item of driverList; index as i;">{{item.first_name}} {{ item.last_name}}</option>
+      </select>
+    </div>
+
+    <div class="stvInputContainer Select">
+      <label>Propietario <span>*</span></label>
+      <select [(ngModel)]="owner_id" name="owner_id">
+        <option [value]="item.id" *ngFor="let item of ownerList; index as i;">{{item.first_name}} {{ item.last_name}}</option>
+      </select>
+    </div>
+
+    <div class="col-3">
+      <div class="stvInputContainer">
+        <label>Color <span>*</span></label>
+        <input type="text" [(ngModel)]="color" name="color" placeholder="Rojo">
+      </div>
+  
+      <div class="stvInputContainer">
+        <label>Placa <span>*</span></label>
+        <input type="text" [(ngModel)]="placa" name="placa" placeholder="XXA-122">
+      </div>
+  
+      <div class="stvInputContainer Select">
+        <label>Tipo <span>*</span></label>
+        <select [(ngModel)]="type" name="type">
+          <option value="private">Privado</option>
+          <option value="public">Público</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  
+  <div class="formActions">
+    <button class="grey"(click)="close()">Cancelar</button>
+    <button class="primary"(click)="save()">Guardar</button>
+  </div>
+</div>
+
+
+<!-- owner_id: number,
+driver_id: number,
+placa: string,
+color: string,
+type: 'private'|'public' -->
